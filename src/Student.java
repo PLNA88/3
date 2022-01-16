@@ -24,10 +24,7 @@ public class Student {
 
 
     @Override
-    public String toString()
-    {return "Student {" +
-            osoba.toString() +
-            " Wydział: " + wydzial.toString() +
-            '}';
+    public String toString() {
+        return "Student " + osoba + " Wydział: " + wydzial.toString();
     }
 }

@@ -35,4 +35,9 @@ public class Osoba {
     public void informacje(){
         System.out.println("imię: "+ imie + ", nazwisko: "+", numer indeksu: "+indeks);
     }
+
+    @Override
+    public String toString() {
+        return  imie + " " + nazwisko + " ("+ indeks + ")";
+    }
 }
