@@ -18,7 +18,44 @@ public class Main {
         */
 
         /* statusy i wybór ze switch case to najczęstsze użycia enumów, enumy są często używane
-        * w różnego rodzaju listach, selectach jako krótkie opcje wyboru np. jako status A, X (Aktualny, Usunięty) */
+         * w różnego rodzaju listach, selectach jako krótkie opcje wyboru np. jako status A, X (Aktualny, Usunięty) */
 
+        enum LiczbyEnum {
+            jeden, dwa, trzy, cztery, piec, szesc
+        }
+        enum StatusEnum {
+            KONTYNUUJEMY, KONIEC
+        }
+
+        Scanner x = new Scanner(System.in);
+        int wartosc;
+        while (true) {
+            System.out.println("\nWprowadź wartość:");
+            wartosc = x.nextInt();
+            switch (wartosc) {
+                case 1:
+                    System.out.println(LiczbyEnum.jeden);
+                    break;
+                case 2:
+                    System.out.println(LiczbyEnum.dwa);
+                    break;
+                case 3:
+                    System.out.println(LiczbyEnum.trzy);
+                    break;
+                case 4:
+                    System.out.println(LiczbyEnum.cztery);
+                    break;
+                case 5:
+                    System.out.println(LiczbyEnum.piec);
+                    break;
+                case 6:
+                    System.out.println(LiczbyEnum.szesc);
+            }
+            if (wartosc == 0) {
+                System.out.println(StatusEnum.KONIEC);
+                break;
+            } else
+                System.out.println(StatusEnum.KONTYNUUJEMY);
+        }
     }
 }
