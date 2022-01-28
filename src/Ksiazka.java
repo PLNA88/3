@@ -2,14 +2,14 @@ public class Ksiazka {
     private String tytul;
     private String autor;
     protected int rok;
+    protected Gatunek gatunek;
 
-
-    public Ksiazka(){
+    public Ksiazka(String tytul, String autor, int rok, Gatunek gatunek){
         this.tytul = tytul;
         this.autor = autor;
         this.rok = rok;
+        this.gatunek = gatunek;
     }
-
 
     public String getTytul(){
         return tytul;
@@ -20,7 +20,9 @@ public class Ksiazka {
     public int getRok(){
         return rok;
     }
-
+    public Gatunek getGatunek(){
+        return gatunek;
+    }
 
     public void setTytul(String tytul){
         this.tytul = tytul;
@@ -31,9 +33,11 @@ public class Ksiazka {
     public void setRok(int rok){
         this.rok = rok;
     }
-
+    public void setGatunek(Gatunek gatunek){
+        this.gatunek = gatunek;
+    }
 
     public String toString(){
-        return "Książka ''" + tytul + "'' z " + rok + " jest autorstwa " + autor;
+        return "Tytuł: " + tytul + ", autor: " + autor + ", rok wydania: " + rok + ", gatunek: " + gatunek;
     }
 }
